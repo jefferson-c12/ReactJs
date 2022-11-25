@@ -1,10 +1,10 @@
 // import styles from 'Items.module.css';
 
-const Items = ({ items }) => {
+const Items = ({ item }) => {
     <div>
-        <h3>{items.name}</h3>
-        <h4>{items.price}</h4>
-        <p>{items.description}</p>
+        <h3>{item.name}</h3>
+        <h4>{item.price}</h4>
+        <p>{item.description}</p>
     </div>
 };
 

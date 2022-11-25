@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import ItemsList from '../_ItemList/ItemList';
 import styles from './ItemListContainer.module.css';
-import { getItems} from '../../AsyncMock';
+import { getItems } from '../../AsyncMock';
+import ItemsList from '../_ItemList/ItemList';
 
 const ItemListContainer = ({greeting}) => {
     const [items, setItems] = useState([]);
+    console.log(items);
     useEffect(() => {
         getItems()
             .then(response => {
