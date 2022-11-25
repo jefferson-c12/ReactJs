@@ -1,15 +1,15 @@
-import './navBar.css';
-import Button from '../_buttons/buttons';
+import styles from './navBar.module.css'
+import ButtonNav from '../_buttons/buttons';
 import CartWidget from '../_CartWidget/CartWidget';
 
-const NavBar = (props) => {
+const NavBar = () => {
 	return (
-		<nav style={{backgroundColor: props.bgColor}}>
-			<h1 style={{color: props.colorTitle}}><img src={'./images/logo.png'} alt='logo-mg' className='logo'/>E-COMMERS</h1>
-			<Button text='Inicio' bgColor='#a4bfd9' colorText='#1a1a1a' />
-			<Button text='Productos' bgColor='#a4bfd9' colorText='#1a1a1a' />
-			<Button text='About us' bgColor='#a4bfd9' colorText='#1a1a1a' />
-			<CartWidget bgColor='#a4bfd9'/>
+		<nav className={styles.bgNav}>
+			<h1 className={styles.fontColorBlack}><img src={'./images/logo.png'} alt='logo-mg' className={styles.logo}/>E-COMMERS</h1>
+			<ButtonNav text='Inicio' />
+			<ButtonNav text='Productos' />
+			<ButtonNav text='About us' />
+			<CartWidget />
 		</nav>
 	)
 };

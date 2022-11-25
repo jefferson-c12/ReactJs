@@ -1,0 +1,21 @@
+.buttonReset{
+    border-style: none;
+}
+
+.buttonSize{
+    height: 40px;
+    width: 100px;
+}
+
+.bgButton{
+    background-color: #A4BFD9;
+}
+
+.borderButton{
+    border: 1px solid #303d50;
+}
+
+.fontBlack{
+    color: #1A1A1A;
+}
+

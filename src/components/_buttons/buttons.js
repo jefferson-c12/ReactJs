@@ -1,5 +1,8 @@
-const Button = (props) => {
-    return <button style={{color: props.colorText, backgroundColor: props.bgColor}}>{props.text}</button>
+import styles from './buttons.module.css';
+
+const ButtonNav = ({text}) => {
+    return <button className={`${styles.bgButton} ${styles.buttonReset} ${styles.buttonSize} ${styles.borderButton} ${styles.fontBlack}`}>{text}</button>
 };
 
-export default Button;
+export default ButtonNav;
+

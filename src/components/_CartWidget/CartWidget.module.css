@@ -1,0 +1,20 @@
+.contReset{
+    border-style: none;
+}
+
+.contSize{
+    height: 40px;
+    width: 100px;
+}
+
+.bgCont{
+    background-color: #A4BFD9;
+}
+
+.borderCont{
+    border: 1px solid #303d50;
+}
+
+.fontBlack{
+    color: #1A1A1A;
+}
