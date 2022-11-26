@@ -1,0 +1,15 @@
+.itemContainer {
+    width: 300px;
+    height: 300px;
+    margin: 1rem;
+}
+
+.itemBorder{
+    border: 1px solid #B0BFC5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.bgItemContainer{
+    background-color: #EBEFF3;
+}
