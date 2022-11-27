@@ -3,7 +3,7 @@ import styles from './ItemList.module.css'
 
 const ItemsList = ({ items }) => {
     return(
-        <div className={styles.itemList}>
+        <div className={`${styles.itemsList} ${styles.itemsListContainer}`}>
             { 
                 items.map(item => (
                     <Items key={item.ID} item={item} />

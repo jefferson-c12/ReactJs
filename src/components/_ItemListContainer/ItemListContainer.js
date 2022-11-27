@@ -15,7 +15,7 @@ const ItemListContainer = ({greeting}) => {
         })
     }, []);
     return(
-        <section>
+        <section className={`${styles.bgItemsListContainer} ${styles.itemsListContainer}`}>
             <h2 className={styles.fontBlack}>{greeting}</h2>
             <ItemsList items={items} />
         </section>

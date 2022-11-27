@@ -1,9 +1,10 @@
 const items = [
     {
         ID: 1,
-        name: 'Capita America CW',
+        name: 'Capitan America CW',
         price: 999,
         description: 'Lorem Ipsum',
+        // picture: <img src="./images/capCw.png" alt="capitan-america-cw" />
     },
     {
         ID: 2,

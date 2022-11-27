@@ -1,3 +1,14 @@
 .fontBlack{
     color: #1A1A1A;
 }
+
+.itemsListContainer{
+    width: 100%;
+    height: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.bgItemsListContainer{
+    background-color: #c4d1d6;
+}

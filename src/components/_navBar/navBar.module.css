@@ -4,10 +4,22 @@
 }
 
 .bgNav{
-    background-color: #4376A3;
+    background-color: #2b577e;
+}
+
+.navBorder{
+    border: 1px solid #91A4AE;
+    border-top: none;
+    box-shadow: 2px 4px 8px rgb(0 0 0 / 10%), 4px 16px 32px rgb(0 0 0 / 10%);
 }
 
 .fontColorBlack{
     color: #1a1a1a;
+}
+
+.divNav{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 

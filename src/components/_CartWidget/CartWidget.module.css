@@ -13,8 +13,10 @@
 
 .borderCont{
     border: 1px solid #303d50;
+    border-bottom: none;
 }
 
 .fontBlack{
     color: #1A1A1A;
 }
+

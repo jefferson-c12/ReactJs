@@ -1,9 +1,10 @@
 import styles from './CartWidget.module.css'
-const CartWidget = (props) => {
+
+const CartWidget = () => {
     return (
         <button className={`${styles.contReset} ${styles.contSize} ${styles.bgCont} ${styles.borderCont} ${styles.fontBlack}`}>
             X
-            <img src={'./images/cart.svg'} alt='cart-widget'/>
+            <img src={'./images/svg/cart.svg'} alt='cart-widget'/>
         </button>
     )
 };

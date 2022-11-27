@@ -1,3 +1,11 @@
+.itemsListContainer{
+    width: 100%;
+    height: auto;
+}
+
 .itemsList {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
