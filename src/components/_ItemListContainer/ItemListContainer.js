@@ -1,22 +1,23 @@
 import { useState, useEffect } from 'react';
 import styles from './ItemListContainer.module.css';
-import { getItems } from '../../AsyncMock';
 import ItemsList from '../_ItemList/ItemList';
+import { getItems } from '../../AsyncMock';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({ text }) => {
+    
     const [items, setItems] = useState([]);
-    console.log(items);
+
     useEffect(() => {
-        getItems()
-            .then(response => {
-                setItems(response)
+        getItems().then(response => {
+            setItems(response)
         }).catch(error => {
             console.log(error)
-        })
+        });
     }, []);
+
     return(
         <section className={`${styles.bgItemsListContainer} ${styles.itemsListContainer}`}>
-            <h2 className={styles.fontBlack}>{greeting}</h2>
+            <h2 className={styles.fontBlack}>{text}</h2>
             <ItemsList items={items} />
         </section>
     );

@@ -1,7 +1,8 @@
 .itemContainer {
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 450px;
     margin: 1rem;
+    margin-top: 2rem;
 }
 
 .itemBorder{
@@ -13,6 +14,32 @@
 .bgItemContainer{
     background-color: #EBEFF3;
 }
+
+.imgSize{
+    width: 190px;
+    height: auto;
+    margin-top: 1rem;
+    align-content: center;
+}
+
+.fsName{
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-weight: 650;
+}
+
+.fsDesc{
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    font: 500;
+}
+
+.fsPrice{
+    color: #1a1a1a;
+    font-size: 1.4rem;
+    font: 675;
+}
+
 /* 
 .bgFooter{
     background-color: #566D7A

@@ -1,5 +1,17 @@
+.buttonContainer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: -1rem;
+}
+
 .buttonReset{
-    border-style: none;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.buttonReset:hover{
+    color: #1a1a1a;
 }
 
 .buttonSize{
@@ -8,15 +20,18 @@
 }
 
 .bgButton{
-    background-color: #A4BFD9;
+    background: rgb(43,87,126);
+    background: linear-gradient(180deg, rgba(43,87,126,1) 40%, rgba(86,109,122,1) 100%);
 }
 
 .borderButton{
     border: 1px solid #303d50;
-    border-bottom: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: none;
+    box-shadow: 2px 4px rgb(0 0 0 / 10%), 4px 8px rgb(0 0 0 / 10%);
 }
 
-.fontBlack{
-    color: #1A1A1A;
-}
+
+
 

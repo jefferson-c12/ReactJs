@@ -8,12 +8,16 @@
 }
 
 .bgCont{
-    background-color: #A4BFD9;
+    background: rgb(43,87,126);
+    background: linear-gradient(180deg, rgba(43,87,126,1) 40%, rgba(86,109,122,1) 100%);
 }
 
 .borderCont{
     border: 1px solid #303d50;
-    border-bottom: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: none;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
 
 .fontBlack{
