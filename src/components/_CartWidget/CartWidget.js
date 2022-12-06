@@ -4,7 +4,7 @@ const CartWidget = () => {
     return (
         <div className={`${styles.contReset} ${styles.contSize} ${styles.bgCont} ${styles.borderCont} ${styles.fontBlack}`}>
             <span>x</span>
-            <img src={'./images/svg/cart.svg'} alt='cart-widget'/>
+            <img src='../../images/svg/cart.svg' alt='cart-widget'/>
         </div>
     )
 };

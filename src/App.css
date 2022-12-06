@@ -4,8 +4,13 @@
     text-decoration: none;
 }
 
+body{
+  background-color: #c4d1d6;
+}
+
 .App {
   text-align: center;
+  background-color: #c4d1d6;
 }
 
 .App-logo {

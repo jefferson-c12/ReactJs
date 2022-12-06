@@ -6,7 +6,7 @@ const ItemsList = ({ items }) => {
         <div className={`${styles.itemsList} ${styles.itemsListContainer}`}>
             { 
                 items.map(item => (
-                    <Items key={item.ID} item={item}/>
+                    <Items key={item.id} item={item}/>
                 )) 
             }
         </div>

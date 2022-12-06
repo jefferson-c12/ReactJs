@@ -45,3 +45,22 @@
     background-color: #566D7A
 }
 */
+
+/* BUTTON STYLES */
+
+.buttonBuy, .buttonBuy:hover{
+    /* size */
+    width: 90%;
+    /* ubication */
+    align-content: center;
+    justify-content: center;
+    /* fontStyle */
+    color: #1a1a1a;
+    text-decoration: none;
+    /* backgraound */
+    background: rgb(206, 222, 236);
+    /* border */
+    border: 1px solid #a6b6ce;
+    border-radius: 3px;
+    box-shadow:  2px 4px rgb(0 0 0 / 10%), 0 4px 8px rgb(0 0 0 / 10%);
+}
