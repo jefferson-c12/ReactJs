@@ -7,7 +7,7 @@ const Items = ({ item }) => {
             <img className={styles.imgSize} src={item.picture} alt={item.name} />
             <h3 className={styles.fsName}>{item.name}</h3>
             <h4 className={styles.fsPrice}>{item.price}</h4>
-            <Link to={`/detalles/${item.id}`} className={`${styles.buttonBuy} ${styles.buttonSize}`}>Comprar</Link>
+            <Link to={`/detalles/${item.id}`}><button className={`${styles.buttonBuy} ${styles.buttonSize}`}>Comprar</button></Link>
         </article>
     )
 };

@@ -1,20 +1,31 @@
 import { useState, useEffect } from 'react';
 import styles from './ItemListContainer.module.css';
 import ItemsList from '../_ItemList/ItemList';
-import { getItems } from '../../AsyncMock';
+import { getItems, getItemsByCategory } from '../../AsyncMock';
 import Filter from '../_Filter/Filter';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({ text }) => {
     
     const [items, setItems] = useState([]);
+    const { categoryId } = useParams();
+    console.log(categoryId);
 
     useEffect(() => {
-        getItems().then(response => {
-            setItems(response)
-        }).catch(error => {
-            console.log(error)
-        });
-    }, []);
+        if(!categoryId) {
+            getItems().then(response => {
+                setItems(response)
+            }).catch(error => {
+                console.log(error)
+            })
+        }else{
+            getItemsByCategory(categoryId).then(response => {
+                setItems(response)
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+    }, [categoryId]);
 
     return(
         <section className={`${styles.bgItemsListContainer} ${styles.itemsListContainer}`}>

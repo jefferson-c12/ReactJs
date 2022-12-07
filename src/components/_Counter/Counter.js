@@ -25,12 +25,6 @@ const Counter = ({ initial, stocks, onAdd }) => {
         }
     };
 
-    /*const onAdd = () => {
-        if(count === initial){() => {
-             console.log('No se registraron productos que agregar');
-        }}
-    };*/
-
     return(
         <>
             <div className={styles.counter}>
@@ -38,7 +32,7 @@ const Counter = ({ initial, stocks, onAdd }) => {
                 <h5 className={styles.count}>{count}</h5>
                 <button className={styles.addButton} onClick={() => increment()}>+</button>
             </div>
-            <button className={styles.addCartButton} onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <button className={styles.addCartButton} onClick={() => onAdd(count)} disabled={!count}>Agregar al carrito</button>
         </>
     )
 };
