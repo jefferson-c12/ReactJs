@@ -1,0 +1,18 @@
+.counterContainer{
+    /* grid */
+    grid-column: 2/4;
+    grid-row: 3;
+    /* size */
+    width: 30rem;
+    height: 5rem;
+    /* container */
+    background-color: #d0dde4;
+    /*position*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border */
+    border: 1px solid #91A4AE;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}

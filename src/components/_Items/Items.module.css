@@ -48,9 +48,7 @@
 
 /* BUTTON STYLES */
 
-.buttonBuy, .buttonBuy:hover{
-    /* size */
-    width: 90%;
+.buttonBuy{
     /* ubication */
     align-content: center;
     justify-content: center;
@@ -58,9 +56,22 @@
     color: #1a1a1a;
     text-decoration: none;
     /* backgraound */
-    background: rgb(206, 222, 236);
+    background: #f1f1f1;
     /* border */
     border: 1px solid #a6b6ce;
     border-radius: 3px;
-    box-shadow:  2px 4px rgb(0 0 0 / 10%), 0 4px 8px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 4px 8px rgb(0 0 0 / 10%);
+}
+
+.buttonSize{
+    /* size */
+    width: 10rem;
+    height: 2rem;
+}
+
+.buttonBuy:hover{
+    /* backgraound */
+    background: #1b688f;
+    /* fontstyle */
+    color: #f1f1f1;
 }

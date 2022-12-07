@@ -1,0 +1,13 @@
+.filterContainer{
+    /* position */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo{
+    /* size */
+    width: auto;
+    height: 3rem;
+    /* position */
+}

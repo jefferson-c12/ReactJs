@@ -1,4 +1,5 @@
 import CounterContainer from "../_CounterCotainer/CounterContainer";
+import styles from './ItemDetailContainer.module.css';
 import { useEffect, useState } from "react";
 import { getItemById } from "../../AsyncMock";
 import { useParams } from "react-router-dom";
@@ -7,7 +8,6 @@ const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({});
     const { itemId } = useParams();
-    console.log(item);
 
     useEffect(() => {
         getItemById(itemId)
@@ -20,11 +20,11 @@ const ItemDetailContainer = () => {
     }, [itemId]);
 
     return (
-        <section>
-            <img src={item.picture} alt={item.name}/>
-            <h4>{item.name}</h4>
-            <p>{item.description}</p>
-            <CounterContainer />
+        <section id={styles.container} className={styles.itemDetailContainer}>
+            <img id={styles.png} src={item.picture} alt={item.name}/>
+            <h4 id={styles.title}>{item.name}</h4>
+            <p id={styles.desc} >{item.description}</p>
+            <CounterContainer stock={item.stock} />
         </section>
     )
 };

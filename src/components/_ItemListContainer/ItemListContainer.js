@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './ItemListContainer.module.css';
 import ItemsList from '../_ItemList/ItemList';
 import { getItems } from '../../AsyncMock';
+import Filter from '../_Filter/Filter';
 
 const ItemListContainer = ({ text }) => {
     
@@ -18,6 +19,7 @@ const ItemListContainer = ({ text }) => {
     return(
         <section className={`${styles.bgItemsListContainer} ${styles.itemsListContainer}`}>
             <h2 className={styles.fontBlack}>{text}</h2>
+            <Filter />
             <ItemsList items={items} />
         </section>
     );

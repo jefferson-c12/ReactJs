@@ -6,9 +6,8 @@ const Items = ({ item }) => {
         <article className={`${styles.itemContainer} ${styles.itemBorder} ${styles.bgItemContainer}`}>   
             <img className={styles.imgSize} src={item.picture} alt={item.name} />
             <h3 className={styles.fsName}>{item.name}</h3>
-            <p className={styles.fsDesc}>{item.description}</p>
             <h4 className={styles.fsPrice}>{item.price}</h4>
-            <Link className={`${styles.buttonBuy}`} to={`/detalles/${item.id}`}>Comprar</Link>
+            <Link to={`/detalles/${item.id}`} className={`${styles.buttonBuy} ${styles.buttonSize}`}>Comprar</Link>
         </article>
     )
 };

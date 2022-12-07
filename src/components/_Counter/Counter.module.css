@@ -1,0 +1,57 @@
+.counter{
+    display: flex;
+    margin: 0;
+}
+
+.quitButton{
+    color: #eff3f5;
+    background-color: #2b7197;
+    border: 1px solid #91A4AE;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    width: 2rem;
+    height: 2rem;
+}
+
+.count{
+    /* size */
+    width: 10rem;
+    height: 2rem;
+    /* position */
+    margin-left: .5rem;
+    margin-right: .5rem;
+    /* container */
+    background-color: #eff3f5;
+    /* font */
+    color: #1a1a1a;
+    /* border */
+    border: 1px solid #91A4AE;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.addButton{
+    color: #eff3f5;
+    background-color: #2b7197;
+    border: 1px solid #91A4AE;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    width: 2rem;
+    height: 2rem;
+}
+
+.addCartButton{
+    /* size */
+    width: 10rem;
+    height: 2rem;
+    /* position */
+    margin-left: 3rem;
+    /* cantainer */
+    background-color: #1f678d;
+    /* font */
+    color: #f1f1f1;
+    /* border */
+    border: 1px solid #91A4AE;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
