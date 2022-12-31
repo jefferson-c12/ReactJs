@@ -1,0 +1,19 @@
+.viewCartContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.viewCartProduct{
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px double rgb(29, 29, 70);
+    border-bottom: 1px double rgb(29, 29, 70);
+}
+
+.fontStyle{
+    font-size: 6rem;
+}

@@ -1,6 +1,6 @@
 .itemContainer {
     width: 250px;
-    height: 450px;
+    height: auto;
     margin: 1rem;
     margin-top: 2rem;
 }
@@ -49,7 +49,12 @@
 /* BUTTON STYLES */
 
 .buttonBuy{
+    /* size */
+    width: 10rem;
+    height: 2rem;
     /* ubication */
+    margin: .2rem;
+    margin-bottom: 1rem;
     align-content: center;
     justify-content: center;
     /* fontStyle */
@@ -63,15 +68,37 @@
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 4px 8px rgb(0 0 0 / 10%);
 }
 
-.buttonSize{
-    /* size */
-    width: 10rem;
-    height: 2rem;
-}
-
 .buttonBuy:hover{
     /* backgraound */
     background: #1b688f;
     /* fontstyle */
     color: #f1f1f1;
 }
+
+.buttonAddCart{
+    /* size */
+    width: 10rem;
+    height: 2rem;
+    /* ubication */
+    margin: .2rem;
+    margin-bottom: 1rem;
+    align-content: center;
+    justify-content: center;
+    /* fontStyle */
+    color: #1a1a1a;
+    text-decoration: none;
+    /* backgraound */
+    background: #f1f1f1;
+    /* border */
+    border: 1px solid #a6b6ce;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 4px 8px rgb(0 0 0 / 10%);
+}
+
+.buttonAddCart:hover{
+    /* backgraound */
+    background: #1b688f;
+    /* fontstyle */
+    color: #f1f1f1;
+}
+

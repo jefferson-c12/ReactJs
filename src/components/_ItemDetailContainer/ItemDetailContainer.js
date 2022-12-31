@@ -1,21 +1,27 @@
 import CounterContainer from "../_CounterCotainer/CounterContainer";
 import styles from './ItemDetailContainer.module.css';
 import { useEffect, useState } from "react";
-import { getItemById } from "../../AsyncMock";
+import { getDoc, doc } from 'firebase/firestore';
 import { useParams } from "react-router-dom";
+import { db } from "../../service/firebase/firebaseConfig";
 
 const ItemDetailContainer = () => {
+
+    
 
     const [item, setItem] = useState({});
     const { itemId } = useParams();
 
     useEffect(() => {
-        getItemById(itemId)
-            .then(response => {
-                setItem(response);
+        const docRef = doc(db, 'items', itemId)
+        getDoc(docRef)
+            .then(doc => {
+                const data = doc.data();
+                const adaptedItem = {id: doc.id, ...data};
+                setItem(adaptedItem);
             })
             .catch(error => {
-                console.log(error);
+                console.log(error)
             })
     }, [itemId]);
 
@@ -24,7 +30,7 @@ const ItemDetailContainer = () => {
             <img id={styles.png} src={item.picture} alt={item.name}/>
             <h4 id={styles.title}>{item.name}</h4>
             <p id={styles.desc} >{item.description}</p>
-            <CounterContainer stock={item.stock} />
+            <CounterContainer stock={item.stock} items={item} id={item.id} price={item.price} name={item.name} />
         </section>
     )
 };
