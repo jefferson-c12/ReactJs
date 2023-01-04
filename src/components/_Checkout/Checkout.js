@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AddedCartContext } from "../../context/CartContext"
 import { collection, writeBatch, query, where, getDocs, documentId, addDoc } from 'firebase/firestore';
 import { db } from '../../service/firebase/firebaseConfig';
@@ -10,9 +10,9 @@ const Checkout = () => {
     const handleCreateOrder = async () => {
         const orderObj = {
             buyer: {
-                name: 'name',
-                emali: 'mail@gmail.com',
-                phone: '1234567890'
+                name: userName,
+                emali: userMail,
+                phone: userPhone
             },
             items: addedCart,
             //total: getTotal()
@@ -47,11 +47,25 @@ const Checkout = () => {
         }
     }
 
+    const [ userName, setUserName ] = useState('');
+    const [ userMail, setUserMail ] = useState('');
+    const [ userPhone, setUserPhone ] = useState('');
+    
 
     return(
         <section>
             <h2>Ingrese sus datos:</h2>
-            <button onClick={handleCreateOrder}>Confirmar orden</button>
+            <form onSubmit={ e => {
+                    e.preventDefault();
+                    setUserName(e.target.userName.value);
+                    setUserMail(e.target.userMail.value);
+                    setUserPhone(e.target.userPhone.value);
+            }}>
+                <input name='userName' autoComplete="off" placeholder="Nombre y apellido"></input>
+                <input name='userMail' autoComplete="off" placeholder="email@gmail.com"></input>
+                <input name='userPhone' autoComplete="off" placeholder="Nº de telefono"></input>
+                <button type="submit" onClick={handleCreateOrder}>Confirmar orden</button>
+            </form>
         </section>
     )
 }
