@@ -2,10 +2,11 @@ import { useContext, useState } from "react"
 import { AddedCartContext } from "../../context/CartContext"
 import { collection, writeBatch, query, where, getDocs, documentId, addDoc } from 'firebase/firestore';
 import { db } from '../../service/firebase/firebaseConfig';
+import styles from './Checkout.module.css';
 
 const Checkout = () => {
 
-    const {addedCart, } = useContext(AddedCartContext);
+    const { addedCart, getTotal } = useContext(AddedCartContext);
 
     const handleCreateOrder = async () => {
         const orderObj = {
@@ -15,7 +16,7 @@ const Checkout = () => {
                 phone: userPhone
             },
             items: addedCart,
-            //total: getTotal()
+            total: getTotal()
         }
 
         const batch = writeBatch(db);
@@ -47,24 +48,24 @@ const Checkout = () => {
         }
     }
 
-    const [ userName, setUserName ] = useState('');
-    const [ userMail, setUserMail ] = useState('');
-    const [ userPhone, setUserPhone ] = useState('');
+    const [ userName, setUserName ] = useState();
+    const [ userMail, setUserMail ] = useState();
+    const [ userPhone, setUserPhone ] = useState();
     
 
     return(
-        <section>
+        <section className={styles.section}>
             <h2>Ingrese sus datos:</h2>
-            <form onSubmit={ e => {
+            <form className={styles.formContainer} onSubmit={ e => {
                     e.preventDefault();
                     setUserName(e.target.userName.value);
                     setUserMail(e.target.userMail.value);
                     setUserPhone(e.target.userPhone.value);
             }}>
-                <input name='userName' autoComplete="off" placeholder="Nombre y apellido"></input>
-                <input name='userMail' autoComplete="off" placeholder="email@gmail.com"></input>
-                <input name='userPhone' autoComplete="off" placeholder="Nº de telefono"></input>
-                <button type="submit" onClick={handleCreateOrder}>Confirmar orden</button>
+                <input className={styles.inputForm} name='userName' autoComplete="off" placeholder="Nombre y apellido"></input>
+                <input className={styles.inputForm} name='userMail' autoComplete="off" placeholder="email@gmail.com"></input>
+                <input className={styles.inputForm} name='userPhone' autoComplete="off" placeholder="Nº de telefono"></input>
+                <button className={styles.button} type="submit" onClick={handleCreateOrder}>Confirmar orden</button>
             </form>
         </section>
     )

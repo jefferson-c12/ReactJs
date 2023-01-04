@@ -7,6 +7,8 @@ import ViewCart from './components/_ViewCart/ViewCart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Checkout from './components/_Checkout/Checkout';
+import AboutUs from './components/_AboutUs/AboutUs';
+import Footer from './components/_Footer/Footer';
 
 function App() {
 
@@ -22,7 +24,9 @@ function App() {
             <Route path='/detalles/:itemId' element={<ItemDetailContainer />} />
             <Route path='/micarrito' element={<ViewCart />} />
             <Route path='/micarrito/formulario' element={<Checkout />} />
+            <Route path='/nosotros' element={<AboutUs />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </CartProvider>
     </div>

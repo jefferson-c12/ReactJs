@@ -62,3 +62,7 @@
     /* font */
     font-size: 1.3rem;
 }
+
+.loading {
+    margin-top: 20vh;
+}

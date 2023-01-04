@@ -15,5 +15,39 @@
 }
 
 .fontStyle{
-    font-size: 6rem;
+    font-size: 2rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    /* size */
+    width: 10rem;
+    height: 2rem;
+    /* ubication */
+    margin: .2rem;
+    margin-bottom: 1rem;
+    align-content: center;
+    justify-content: center;
+    /* fontStyle */
+    color: #1a1a1a;
+    text-decoration: none;
+    /* backgraound */
+    background: #f1f1f1;
+    /* border */
+    border: 1px solid #a6b6ce;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 4px 8px rgb(0 0 0 / 10%);
+}
+
+.button:hover{
+    /* backgraound */
+    background: #1b688f;
+    /* fontstyle */
+    color: #f1f1f1;
 }

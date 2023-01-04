@@ -4,13 +4,15 @@ import { useEffect, useState } from "react";
 import { getDoc, doc } from 'firebase/firestore';
 import { useParams } from "react-router-dom";
 import { db } from "../../service/firebase/firebaseConfig";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Spinner } from 'reactstrap';
+
 
 const ItemDetailContainer = () => {
 
-    
-
     const [item, setItem] = useState({});
     const { itemId } = useParams();
+    const [ loading, setLoading ] = useState(true)
 
     useEffect(() => {
         const docRef = doc(db, 'items', itemId)
@@ -23,9 +25,15 @@ const ItemDetailContainer = () => {
             .catch(error => {
                 console.log(error)
             })
+            .finally(() => {
+                setLoading(false)
+            })
     }, [itemId]);
 
-    return (
+    if (loading) {
+        return <Spinner color="secondary" className={styles.loading}/>
+    } else {
+        return (
         <section id={styles.container} className={styles.itemDetailContainer}>
             <img id={styles.png} src={item.picture} alt={item.name}/>
             <h4 id={styles.title}>{item.name}</h4>
@@ -33,6 +41,7 @@ const ItemDetailContainer = () => {
             <CounterContainer stock={item.stock} items={item} id={item.id} price={item.price} name={item.name} />
         </section>
     )
+    }
 };
 
 export default ItemDetailContainer;
