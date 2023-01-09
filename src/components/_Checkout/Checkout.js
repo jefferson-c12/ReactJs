@@ -48,23 +48,18 @@ const Checkout = () => {
         }
     }
 
-    const [ userName, setUserName ] = useState();
-    const [ userMail, setUserMail ] = useState();
-    const [ userPhone, setUserPhone ] = useState();
+    const [ userName, setUserName ] = useState("");
+    const [ userMail, setUserMail ] = useState("");
+    const [ userPhone, setUserPhone ] = useState("");
     
 
     return(
         <section className={styles.section}>
             <h2>Ingrese sus datos:</h2>
-            <form className={styles.formContainer} onSubmit={ e => {
-                    e.preventDefault();
-                    setUserName(e.target.userName.value);
-                    setUserMail(e.target.userMail.value);
-                    setUserPhone(e.target.userPhone.value);
-            }}>
-                <input className={styles.inputForm} name='userName' autoComplete="off" placeholder="Nombre y apellido"></input>
-                <input className={styles.inputForm} name='userMail' autoComplete="off" placeholder="email@gmail.com"></input>
-                <input className={styles.inputForm} name='userPhone' autoComplete="off" placeholder="Nº de telefono"></input>
+            <form className={styles.formContainer} onSubmit={ e => {e.preventDefault();}}>
+                <input className={styles.inputForm} name='userName' autoComplete="off" placeholder="Nombre y apellido" onChange={ e => { setUserName(e.target.value) } } value={userName}></input>
+                <input className={styles.inputForm} name='userMail' autoComplete="off" placeholder="email@gmail.com" onChange={ e => { setUserMail(e.target.value) } } value={userMail}></input>
+                <input className={styles.inputForm} name='userPhone' autoComplete="off" placeholder="Nº de telefono" onChange={ e => { setUserPhone(e.target.value) } } value={userPhone}></input>
                 <button className={styles.button} type="submit" onClick={handleCreateOrder}>Confirmar orden</button>
             </form>
         </section>
