@@ -5,7 +5,7 @@ import styles from "./ViewCart.module.css";
 
 const ViewCart = () => {
 
-    const { addedCart, getTotal } = useContext(AddedCartContext);
+    const { addedCart, getTotal, removeItem } = useContext(AddedCartContext);
 
     const totalPrice = getTotal()
 
@@ -20,6 +20,7 @@ const ViewCart = () => {
                             <h3 className={styles.fontStyle}>Cantidad: {addCart.quantity}</h3>
                             <h3 className={styles.fontStyle}>Precio: ${addCart.price}</h3>
                             <h3 className={styles.fontStyle}>Subtotal: $ {addCart.price * addCart.quantity}</h3>
+                            <button onClick={() => removeItem(addCart.id)} className={styles.button}>Eliminar</button>
                         </div>
                     )
             })}
